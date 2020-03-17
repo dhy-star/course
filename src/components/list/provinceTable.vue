@@ -42,9 +42,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'provinceTable'
-  }
+export default {
+  name: 'provinceTable'
+}
 </script>
 
 <style scoped>
