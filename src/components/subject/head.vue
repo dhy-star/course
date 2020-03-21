@@ -34,10 +34,20 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'head',
   mounted () {
-    console.log('head')
+    // console.log('head')
+  },
+  created () {
+    axios.get('/api')
+      .then(function (response) {
+        console.log(response.data)
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
   },
   methods: {
     skip (e, name) {
