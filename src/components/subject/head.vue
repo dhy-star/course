@@ -13,18 +13,18 @@
                 </div>
                 <div id="menu" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li ><a href="#" @click="skip($event,'/')">公告</a></li>
-                        <li><a href="#" @click="skip($event,'/daylog')">日志</a></li>
+                        <li ><a href="#" @click="skip($event,'/window/')">公告</a></li>
+                        <li><a href="#" @click="skip($event,'/window/daylog')">日志</a></li>
 
                         <!--下拉菜单功能的实现-->
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" @click="skip($event,'/list')">
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" @click="skip($event,'/window/list')">
                             办公</a>
                           <!--  <ul class="dropdown-menu">
                                 <li><a href="#" >资源表</a></li>
                                 <li><a href="#">second</a></li>
                             </ul> -->
                         </li>
-                        <li><a href="#">退出</a></li>
+                        <li><a href="#" @click="skip($event,'/')">退出</a></li>
                     </ul>
                 </div>
             </div>
@@ -34,20 +34,20 @@
 </template>
 
 <script>
-import axios from 'axios'
+
 export default {
   name: 'head',
   mounted () {
     // console.log('head')
   },
   created () {
-    axios.get('/api')
+    /* this.ajax.get(this.basePath + '/one')
       .then(function (response) {
         console.log(response.data)
       })
       .catch(function (error) {
         console.log(error)
-      })
+      }) */
   },
   methods: {
     skip (e, name) {

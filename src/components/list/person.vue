@@ -28,10 +28,6 @@
                         <td><input type="text" class="form-control" style="display: inline-block" placeholder=""/></td>
                     </tr>
                     <tr>
-                        <td>电话</td>
-                        <td><input type="text" class="form-control" style="display: inline-block" placeholder=""/></td>
-                    </tr>
-                    <tr>
                         <td>居住地</td>
                         <td><input type="text" class="form-control" style="display: inline-block" placeholder=""/></td>
                     </tr>

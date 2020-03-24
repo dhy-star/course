@@ -7,26 +7,46 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'proclamation',
+      name: 'login',
       component: function (resolve) {
-        require(['../components/subject/proclamation'], resolve)
+        require(['../components/login/login'], resolve)
       }
-
     },
     {
-      path: '/daylog',
-      name: 'day_log',
+      path: '/window',
+      name: 'window',
       component: function (resolve) {
-        require(['../components/subject/day_log'], resolve)
-      }
+        require(['../components/body/window'], resolve)
+      },
+      children: [
+        {
+          path: '',
+          name: 'proclamation',
+          component: function (resolve) {
+            require(['../components/subject/proclamation'], resolve)
+          }
 
-    },
-    {
-      path: '/list',
-      name: 'list',
-      component: function (resolve) {
-        require(['../components/subject/list'], resolve)
-      }
+        },
+
+        {
+          path: 'daylog',
+          name: 'day_log',
+          component: function (resolve) {
+            require(['../components/subject/day_log'], resolve)
+          }
+
+        },
+        {
+          path: 'list',
+          name: 'list',
+          component: function (resolve) {
+            require(['../components/subject/list'], resolve)
+          }
+        }
+
+      ]
+
     }
+
   ]
 })
